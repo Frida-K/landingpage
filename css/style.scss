@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Petrona:wght@300&family=Ubuntu+Condensed&family=Ubuntu:wght@300;400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    padding: 5% 5% 0 5%;
+    background-image: linear-gradient(
+    to right, 
+    #00c5fbdf 0%, 
+    #005aead6 50%,
+    #601baae2 100%);
+    font-family: 'Ubuntu Condensed', sans-serif;
+    overflow: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+    display: flex;
+    align-items: center;
+        img{
+            width: 40px;
+            height: 40px;
+        }
+        h1{
+            padding-left: 15px;
+            font-family: 'Petrona', serif;
+            color: white;
+        }
+    }
+    .liens{
+        .lien{
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            font-size: 1.5rem;
+        }
+    }
+}
+main {
+    width: 90vw;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    
+    .marketing {
+        color: rgb(254, 254, 255);
+        h1{
+            color: #005aead6;
+            font-family: 'Petrona', serif;
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.372);
+        }
+        h2{
+            font-size: 2rem;
+            line-height: 2 ;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        p{
+            font-size: 1.5rem;
+            line-height: 1.5;
+            width:58%;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+    }
+    .actions{
+        padding-top: 1rem;
+        margin-top: 10px;
+        button{
+            margin-right: 10px;
+            padding: 10px 30px;
+            font-size: 1.10rem;
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+    }
+    img{
+        width: 60vw;
+        transform: rotateY(180deg);
+        position: absolute;
+        left: 45%;
+        z-index: -3;
+    }
+}
+button{
+    border: none;
+    border-radius: 5px;
+    background: #005aead6;
+    color: rgb(254, 254, 255);
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        display: block;
+        text-align: center;
+        .logo {
+            display: block; 
+            margin-bottom: 25px;           
+            img{
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+    main {
+        height: 100vh;
+        display: block;
+        .marketing {
+            margin: 20px 0;
+            text-align: center;
+            p{
+                width:95%;
+                padding: 5px;
+            }
+        }
+        img{
+            width: 100%;
+            position: absolute;
+            left: 0;
+            z-index: -3;
+        }
+    }
+}
